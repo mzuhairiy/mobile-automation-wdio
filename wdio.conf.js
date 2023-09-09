@@ -1,3 +1,5 @@
+const video = require('wdio-video-reporter');
+
 const path = require('path');
 
 exports.config = {
@@ -147,8 +149,17 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
+    reporters: ['spec'
+        // [video,{
+        //     saveAllVideos: false,
+        //     videoSlowDownMultiplier: 3,
+        // }],
+        // ['allure',{
+        //     outputDir: './_results_/allure_raw',
+        //     disableWebdriverStepsReporting: true,
+        //     disableWebdriverScreenshotReporting: true,
+        // }],
+        ],
     
     //
     // Options to be passed to Mocha.
